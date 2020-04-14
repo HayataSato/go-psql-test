@@ -1,0 +1,32 @@
+{{ define "content" }}
+
+<div class="index">
+    <div class="intro">
+        <h5>PostgreSQLとAPIのテスト</h5>
+        <h6>Usage (以下をterminalで実行)</h6>
+        <li>curl -i -X GET {rootディレクトリのパス}/api/{id}</li>
+        <li>curl -i -X POST -H "Content-Type: application/json" -d '{"Name": {"なまえ"}, "Major": {"せんこう"}}' {rootディレクトリのパス}/api/</li>
+        <li>curl -i -X PUT -H "Content-Type: application/json" -d '{"Name": {"なまえ"}, "Major": {"せんこう"}}' {rootディレクトリのパス}/api/{id}</li>
+        <li>curl -i -X DELETE {rootディレクトリのパス}/api/{id}</li>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Major</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{ range . }}
+            <tr>
+                <th>{{.ID}}</th>
+                <td>{{.Name}}</td>
+                <td>{{.Major}}</td>
+            </tr>
+        {{ end }}
+        </tbody>
+    </table>
+</div>
+
+{{ end }}
