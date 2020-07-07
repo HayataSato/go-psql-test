@@ -22,7 +22,7 @@ func main() {
 
 	// starting up the server
 	server := &http.Server{
-		Addr:           "127.0.0.1:8080",
+		Addr:           "localhost:8080",
 		Handler:        mux,
 		ReadTimeout:    time.Duration(10 * int64(time.Second)),
 		WriteTimeout:   time.Duration(600 * int64(time.Second)),

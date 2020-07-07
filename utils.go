@@ -10,11 +10,10 @@ import (
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
-
 // Db : ハンドラをグローバル変数として定義
 var Db *sql.DB
 
-// PsqlExec : DBハンドラの作成
+// DBハンドラの作成
 func psqlExec() {
 	// .envからDB関連の環境変数を取得
 	if err := godotenv.Load("./.env", ) ; err != nil {
@@ -24,7 +23,7 @@ func psqlExec() {
 	DBPORT := os.Getenv("DB_PORT")
 	DBUSER := os.Getenv("DB_USER")
 	DBPASS := os.Getenv("DB_PASS")
-	DBNAME   := os.Getenv("DB_NAME")
+	DBNAME := os.Getenv("DB_NAME")
 
 	// ハンドラ作成
 	var err error
