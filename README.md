@@ -1,9 +1,9 @@
 
 ### Usage
 
-##### 1. Pull
+##### 1. Clone
 ```bash
-git pull git@github.com:HayataSato/go_psql_test.git
+git clone git@github.com:HayataSato/go_psql_test.git psql_test
 ```
 
 ##### 2. Create DB
